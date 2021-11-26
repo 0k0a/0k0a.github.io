@@ -4,17 +4,15 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-async function getIpClient() {
-  try {
-    const response = await axios.get('https://api.ipify.org?format=json');
-    document.write(response);
-  } catch (error) {
-    document.write(error);
+if(window.XMLHttpRequest) {
+  var xHttp = new XMLHttpRequest();
+  xHttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    document.write(this.responseText);
   }
+  xHttp.open("GET", "https://api.ipify.org", true);
+  xHttp.send();
 }
-getIpClient();
     </script>
   </body>
 </html>
