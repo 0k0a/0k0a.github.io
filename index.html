@@ -15,7 +15,7 @@ function fnGetClientIP(url) {
     xHttp.open("GET", url, true);
     xHttp.send();
   }
-  xHttp.open("GET", "https://api.ipify.org", true);
+  xHttp.open("GET", url, true);
   xHttp.send();
 }
 fnGetClientIP("https://ipinfo.io/json");
