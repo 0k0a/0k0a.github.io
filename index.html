@@ -4,19 +4,11 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <script type="text/javascript">
-function fnGetClientIP(url) {
-  if(window.XMLHttpRequest) {
-    var xHttp = new XMLHttpRequest();
-    xHttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200)
-        document.write(this.responseText);
-      };
-    xHttp.open("GET", url, true);
-    xHttp.send();
-  }
+    <script type="application/javascript">
+function getIP(json) {
+  document.write(json.ip);
 }
-fnGetClientIP("https://api.ipify.org?format=json");
     </script>
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
   </body>
 </html>
