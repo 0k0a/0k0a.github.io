@@ -42,7 +42,7 @@ else {
                 if (aTmp[i].substr(0, 9) == "filename=") {
                   var aTmp1 = aTmp[i].split("=");
                   if (aTmp1.length == 2) {
-                    img_dsp.innerHTML = '<img id="img_gga" src="' + url + '" onload="fnGetImageSize()"><br/><input id="txt_url" type="text" style="width: 600px;"><br/><input id="txt_name" type="text" style="width: 600px;" value="' + aTmp1[1] + '">';
+                    img_dsp.innerHTML = '<img id="img_gga" src="' + url + '" onload="fnGetImageSize()"><br/><input id="txt_url" type="text" style="width: 600px;"><br/><input id="txt_name" type="text" style="width: 600px;" value=' + aTmp1[1] + '>';
                   }
                 }
               }
