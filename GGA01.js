@@ -1,8 +1,8 @@
 if (document.location.origin != "https://lh3.googleusercontent.com") {
   alert("Moving Location, Try again.")
   document.location = "https://lh3.googleusercontent.com";
-  return;
-  
+}
+else {  
   var e_div = document.getElementById('div_gga_file');
   var e_target = document.body;
   if ((e_div == null) && (e_target != null)) {
